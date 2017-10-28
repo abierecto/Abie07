@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="short icon" type="text/image" href="logo.jpg">
+  <title>Streetball</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+ body {
+  margin-top: 80px; 
+ }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+footer {
+      background-color: black;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  } 
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      padding: 1.5% 0;
+      background-color: black;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+      border-radius: 0;
+  }
+  .navbar-brand {
+    float: left;
+    min-height: 40px;
+    padding: 0 15px 5px;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: orange !important;
+  } 
+  h1, h3  {
+    font-family: impact;
+    font-size: 50px;
+    letter-spacing: 4px;
+  }
+  h2 {
+     font-family: impact;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage" href="#"><img src="logo.jpg"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">BALLERS
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ballup.html">Ball Up</a></li>
+            <li><a href="nba.html">NBA</a></li> 
+            <li><a href="and1.html">And1</a></li> 
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">GALLERY
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="images.html">Images</a></li>
+            <li><a href="videos.html">Videos</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.facebook.com/RallosJL">VISIT ME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">VARIATIONS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="21.html">Twenty-One</a></li>
+            <li><a href="king.html">King of the Court</a></li>
+            <li><a href="3x3.html">3x3 basketball</a></li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Container (The Ballers Section) -->
+<div id="band" class="container text-center">
+  <br>
+  <h1><i>ballup</i></h1>
+  <h3>Streetball</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Larry Williams</strong></h2><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="bc.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>#23 <br>
+        Nickname: Bone Collector <br>
+        HomeTown: Pasadena, CA <br>
+        Height: 6-0 <br>
+        Weight: 200 LBS</p> 
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Grayson Boucher</strong></h2><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="professor.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>#12 <br>
+        Nickname: The Professor <br>
+        HomeTown: Keizer, OR <br>
+        Height: 5-10 <br>
+        Weight: 150 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Gary Smith</strong></h2><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="smith.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>#19 <br>
+        Nickname: G Smith <br>
+        HomeTown: Phoenix, AZ <br>
+        Height: 6-6 <br>
+        Weight: 202 LBS</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Taurian Fontenette</strong></h2><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="air.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo4" class="collapse">
+        <p>#11 <br>
+       Nickname: Air Up There <br>
+        HomeTown: Hitchcock, TX <br>
+        Height: 6-2 <br>
+       Weight: 190 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Deandre Bray</strong></h2><br>
+      <a href="#demo5" data-toggle="collapse">
+        <img src="mos.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo5" class="collapse">
+        <p>#3 <br>
+        Nickname: Mosquito <br>
+       HomeTown: Atlanta, GA <br>
+        Height: 5-5 <br>
+        Weight: 140 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Robin Kennedy</strong></h2><br>
+      <a href="#demo6" data-toggle="collapse">
+        <img src="sik.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo6" class="collapse">
+        <p>#02 <br>
+       Nickname: Sik Wit It <br>
+        Height: 5-10 <br>
+        Weight: 180 LBS</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Jamal Nelson</strong></h2><br>
+      <a href="#demo7" data-toggle="collapse">
+        <img src="springs.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo7" class="collapse">
+        <p>#07 <br>
+        Nickname: Springs <br>
+        HomeTown: Detroit, MI <br>
+        Height: 6-2 <br>
+        Weight: 165 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Aaron Owens</strong></h2><br>
+      <a href="#demo8" data-toggle="collapse">
+        <img src="ao.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo8" class="collapse">
+        <p>#AO <br>
+        Nickname: AO <br>
+        HomeTown: Philadelphia, PA <br>
+       Height: 6-3 <br>
+        Weight: 195 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Hugh Jones</strong></h2><br>
+      <a href="#demo9" data-toggle="collapse">
+        <img src="shaq.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo9" class="collapse">
+        <p>#06 <br>
+        Nickname: Baby Shaq <br>
+        Height: 6-3 <br>
+        Weight: 230 LBS</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Ryan Williams</strong></h2><br>
+      <a href="#demo10" data-toggle="collapse">
+        <img src="fx.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo10" class="collapse">
+        <p>#718 <br>
+        Nickname: Special FX <br>
+       HomeTown: Queens, N.Y <br>
+        Height: 6-5 <br>
+        Weight: 230 LBS</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h2 class="text-center"><strong>Anthony Pimble</strong></h2><br>
+      <a href="#demo11" data-toggle="collapse">
+        <img src="mr.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo11" class="collapse">
+        <p>#24 <br>
+        Nickname: Mr Afrika <br>
+        HomeTown: Bronx, N.Y <br>
+        Height: 6-5 <br>
+        Weight: 195 LBS</p>
+      </div>
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Made By <a href="https://www.facebook.com/RallosJL" data-toggle="tooltip" title="Visit">John Lloyd</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</body>
+</html>

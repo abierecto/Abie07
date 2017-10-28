@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="short icon" type="text/image" href="logo.jpg">
+  <title>Streetball</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #222;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider {
+  width: 90vmin;
+  height: 90vmin;
+  -webkit-perspective: 100vmin;
+          perspective: 100vmin;
+  margin: auto;
+  -webkit-perspective-origin: top center;
+          perspective-origin: top center;
+  position: relative;
+  box-sizing: border-box;
+}
+.slider__item {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 15vmin;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.18s ease;
+  transition: -webkit-transform 0.18s ease;
+  transition: transform 0.18s ease;
+  transition: transform 0.18s ease, -webkit-transform 0.18s ease;
+}
+.slider__item:nth-child(1) {
+  -webkit-transform: translate3d(0, 0, 0vmin);
+          transform: translate3d(0, 0, 0vmin);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  z-index: 7;
+}
+.slider__item:nth-child(2) {
+  -webkit-transform: translate3d(0, 0, -15vmin);
+          transform: translate3d(0, 0, -15vmin);
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+  z-index: 6;
+}
+.slider__item:nth-child(3) {
+  -webkit-transform: translate3d(0, 0, -30vmin);
+          transform: translate3d(0, 0, -30vmin);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  z-index: 5;
+}
+.slider__item:nth-child(4) {
+  -webkit-transform: translate3d(0, 0, -45vmin);
+          transform: translate3d(0, 0, -45vmin);
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  z-index: 4;
+}
+.slider__item:nth-child(5) {
+  -webkit-transform: translate3d(0, 0, -60vmin);
+          transform: translate3d(0, 0, -60vmin);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  z-index: 3;
+}
+.slider__item:nth-child(6) {
+  -webkit-transform: translate3d(0, 0, -75vmin);
+          transform: translate3d(0, 0, -75vmin);
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+  z-index: 2;
+}
+.slider__item:nth-child(7) {
+  -webkit-transform: translate3d(0, 0, -90vmin);
+          transform: translate3d(0, 0, -90vmin);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  z-index: 1;
+}
+.slider__item:nth-child(8) {
+  -webkit-transform: translate3d(0, 0, -105vmin);
+          transform: translate3d(0, 0, -105vmin);
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+  z-index: 0;
+}
+.slider__image {
+  width: 100%;
+  height: 80%;
+  background-color: #999;
+  border: 1.5vmin solid #eee;
+  box-sizing: border-box;
+  box-shadow: 0px 3vmin 3vmin rgba(0, 0, 0, 0.75), 0 -1.5vmin 2.7vmin rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  display: block;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.18s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.18s ease;
+  transition: transform 0.18s ease, opacity 0.2s ease;
+  transition: transform 0.18s ease, opacity 0.2s ease, -webkit-transform 0.18s ease;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.slider__caption {
+  height: 20%;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 9vmin;
+  height: 9vmin;
+  margin: 2vmin auto;
+  border-right: 2vmin solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2vmin solid rgba(255, 255, 255, 0.65);
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transform: perspective(10vmin) rotateX(-30deg) rotateZ(45deg);
+          transform: perspective(10vmin) rotateX(-30deg) rotateZ(45deg);
+}
+.slider__btn:active {
+  border-right-color: #dd6;
+  border-bottom-color: #dd6;
+}
+body {
+  margin-top: 80px;
+ }
+ .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      padding: 1.5% 0;
+      background-color: black;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+      border-radius: 0;
+  }
+  .navbar-brand {
+    float: left;
+    min-height: 40px;
+    padding: 0 15px 5px;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: orange !important;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage" href="#"><img src="logo.jpg"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">BALLERS
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="ballup.html">Ball Up</a></li>
+            <li><a href="nba.html">NBA</a></li> 
+            <li><a href="and1.html">And1</a></li> 
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">GALLERY
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="images.html">Images</a></li>
+            <li><a href="videos.html">Videos</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.facebook.com/RallosJL">VISIT ME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">VARIATIONS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="21.html">Twenty-One</a></li>
+            <li><a href="king.html">King of the Court</a></li>
+            <li><a href="3x3.html">3x3 basketball</a></li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="slider">
+  <figure class="slider__item"><img class="slider__image" src="a.jpg"/>
+    <figcaption class="slider__caption">Image - 101</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="b.jpg"/>
+    <figcaption class="slider__caption">Image - 102</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="c.jpg"/>
+    <figcaption class="slider__caption">Image - 103</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="d.jpg"/>
+    <figcaption class="slider__caption">Image - 104</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="e.jpg"/>
+    <figcaption class="slider__caption">Image - 105</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="f.jpg"/>
+    <figcaption class="slider__caption">Image - 106</figcaption>
+  </figure>
+  <figure class="slider__item"><img class="slider__image" src="g.jpg"/>
+    <figcaption class="slider__caption">Image - 107</figcaption>
+  </figure>
+</div>
+<div class="slider__btn"></div>
+<script>
+$(function(){
+  var btn = $(".slider__btn");
+  
+  btn.on("click",function(){
+    $(".slider__item").first().clone().appendTo(".slider");
+    $(".slider__image").first().css({transform: "rotateX(-180deg)", opacity: 0});
+    setTimeout(function(){
+      $(".slider__item").first().remove();
+    },200);
+  });
+});
+</script>
+</body>
+</html>
